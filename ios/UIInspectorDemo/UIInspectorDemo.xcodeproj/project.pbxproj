@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		61FBBF8B2FA1A29000FA6E70 /* UIInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 61FBBF8A2FA1A29000FA6E70 /* UIInspector */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		61FBBF6D2FA1A29000FA6E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -22,10 +26,6 @@
 			remoteInfo = UIInspectorDemo;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXBuildFile section */
-		61FBBF8B2FA1A29000FA6E70 /* UIInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 61FBBF8A2FA1A29000FA6E70 /* UIInspector */; };
-/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61FBBF5F2FA1A28F00FA6E70 /* UIInspectorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIInspectorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,11 +201,11 @@
 			);
 			mainGroup = 61FBBF562FA1A28F00FA6E70;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = 61FBBF602FA1A28F00FA6E70 /* Products */;
 			packageReferences = (
 				61FBBF892FA1A29000FA6E70 /* XCLocalSwiftPackageReference ".." */,
 			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 61FBBF602FA1A28F00FA6E70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -276,21 +276,6 @@
 			targetProxy = 61FBBF772FA1A29000FA6E70 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin XCLocalSwiftPackageReference section */
-		61FBBF892FA1A29000FA6E70 /* XCLocalSwiftPackageReference ".." */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "..";
-		};
-/* End XCLocalSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		61FBBF8A2FA1A29000FA6E70 /* UIInspector */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 61FBBF892FA1A29000FA6E70 /* XCLocalSwiftPackageReference ".." */;
-			productName = UIInspector;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCBuildConfiguration section */
 		61FBBF7E2FA1A29000FA6E70 /* Debug */ = {
@@ -602,6 +587,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		61FBBF892FA1A29000FA6E70 /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		61FBBF8A2FA1A29000FA6E70 /* UIInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61FBBF892FA1A29000FA6E70 /* XCLocalSwiftPackageReference ".." */;
+			productName = UIInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 61FBBF572FA1A28F00FA6E70 /* Project object */;
 }
