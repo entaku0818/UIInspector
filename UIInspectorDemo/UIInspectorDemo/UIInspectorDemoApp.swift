@@ -1,14 +1,12 @@
-//
-//  UIInspectorDemoApp.swift
-//  UIInspectorDemo
-//
-//  Created by 遠藤拓弥 on 2026/04/29.
-//
-
 import SwiftUI
+import UIInspector
 
 @main
 struct UIInspectorDemoApp: App {
+    init() {
+        UIInspector.shared.install()
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
