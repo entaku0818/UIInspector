@@ -1,21 +1,24 @@
-//
-//  ContentView.swift
-//  UIInspectorDemo
-//
-//  Created by 遠藤拓弥 on 2026/04/29.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                Section("デモ画面") {
+                    NavigationLink("Profile", destination: ProfileDemoView())
+                    NavigationLink("Form", destination: FormDemoView())
+                    NavigationLink("Card List", destination: CardListDemoView())
+                    NavigationLink("Layout", destination: LayoutDemoView())
+                    NavigationLink("Overlay", destination: OverlayDemoView())
+                }
+                Section {
+                    Text("シェイク または 🔍 ボタンで UIInspector を起動")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .navigationTitle("UIInspector Demo")
         }
-        .padding()
     }
 }
 
