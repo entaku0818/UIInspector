@@ -52,7 +52,7 @@ struct CardListDemoView: View {
         Item(id: 5, title: "Auto Layout", description: "制約ベースのレイアウトをマスター", category: .uikit, icon: "aspectratio", color: .blue),
         Item(id: 6, title: "async/await", description: "モダンな非同期処理を使う", category: .swift, icon: "bolt", color: .yellow),
         Item(id: 7, title: "URLSession", description: "REST API との通信を実装する", category: .data, icon: "network", color: .teal),
-        Item(id: 8, title: "アニメーション", description: "SwiftUI アニメーションの全手法", category: .swift, icon: "sparkles", color: .pink),
+        Item(id: 8, title: "アニメーション", description: "SwiftUI アニメーションの全手法", category: .swift, icon: "sparkles", color: .pink)
     ]
 }
 

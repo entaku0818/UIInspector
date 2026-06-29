@@ -1,7 +1,7 @@
 included:
   - Sources
   - Tests
-  - UIInspectorDemo
+  - ios/UIInspectorDemo
 
 excluded:
   - .build
