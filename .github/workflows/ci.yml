@@ -24,9 +24,16 @@ jobs:
       - name: Select iOS Simulator
         id: simulator
         run: |
+          # Pick an iPhone from the newest installed iOS runtime; older runtimes
+          # preinstalled on the runner may not satisfy the deployment target.
           UDID=$(xcrun simctl list devices available --json \
-            | jq -r '[.devices[] | .[] | select(.isAvailable and (.name | startswith("iPhone")))] | first | .udid')
-          if [ -z "$UDID" ] || [ "$UDID" = "null" ]; then
+            | jq -r '.devices | to_entries
+                | map(select(.key | contains(".iOS-")))
+                | sort_by(.key | split(".iOS-") | last | split("-") | map(tonumber))
+                | .[-1].value
+                | map(select(.isAvailable and (.name | startswith("iPhone"))))
+                | .[0].udid // empty')
+          if [ -z "$UDID" ]; then
             echo "No available iPhone simulator found" >&2
             exit 1
           fi
@@ -50,9 +57,16 @@ jobs:
       - name: Select iOS Simulator
         id: simulator
         run: |
+          # Pick an iPhone from the newest installed iOS runtime; older runtimes
+          # preinstalled on the runner may not satisfy the deployment target.
           UDID=$(xcrun simctl list devices available --json \
-            | jq -r '[.devices[] | .[] | select(.isAvailable and (.name | startswith("iPhone")))] | first | .udid')
-          if [ -z "$UDID" ] || [ "$UDID" = "null" ]; then
+            | jq -r '.devices | to_entries
+                | map(select(.key | contains(".iOS-")))
+                | sort_by(.key | split(".iOS-") | last | split("-") | map(tonumber))
+                | .[-1].value
+                | map(select(.isAvailable and (.name | startswith("iPhone"))))
+                | .[0].udid // empty')
+          if [ -z "$UDID" ]; then
             echo "No available iPhone simulator found" >&2
             exit 1
           fi
